@@ -7,12 +7,12 @@ def calculate(lst):
     arr = np.array(lst, ndmin=2)
     arr = arr.reshape((3,3))
     calculations = {
-        'mean' : [list(arr.mean(axis=0)), list(arr.mean(axis=1)), arr.mean()],
-        'variance' : [list(arr.var(axis=0)), list(arr.var(axis=1)), arr.var()],
-        'standard deviation' : [list(arr.std(axis=0)), list(arr.std(axis=1)), arr.std()],
-        'max' : [list(arr.max(axis=0)), list(arr.max(axis=1)), arr.max()],
-        'min' : [list(arr.min(axis=0)), list(arr.min(axis=1)), arr.min()],
-        'sum' : [list(arr.sum(axis=0)), list(arr.sum(axis=1)), arr.sum()]
+        'mean' : [arr.mean(axis=0).tolist(), arr.mean(axis=1).tolist(), arr.mean().item()],
+        'variance' : [arr.var(axis=0).tolist(), arr.var(axis=1).tolist(), arr.var().item()],
+        'standard deviation' : [arr.std(axis=0).tolist(), arr.std(axis=1).tolist(), arr.std().item()],
+        'max' : [arr.max(axis=0).tolist(), arr.max(axis=1).tolist(), arr.max().item()],
+        'min' : [arr.min(axis=0).tolist(), arr.min(axis=1).tolist(), arr.min().item()],
+        'sum' : [arr.sum(axis=0).tolist(), arr.sum(axis=1).tolist(), arr.sum().item()]
     }
 
 
